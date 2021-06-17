@@ -4,7 +4,7 @@ class usr_conf:
     max_hp = 1000
     mana_trigger = True # mana increase when attacked
     mana_gain = 10 # mana gained from damaging
-    perf_data = "data/example.csv"
+    perf_data = "data/weekly-contest-245_sec.csv"
 
     
 class game_conf:
