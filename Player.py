@@ -5,9 +5,13 @@ import pandas as pd
 def perf_sampling():
     data = pd.read_csv(usr_conf.perf_data)
     data = data.sample(frac=0.5)
+    cols = [f"p{i}_time" for i in range(1,game_conf.n_task+1)]
+    data.columns = data.columns.str.strip()
+    data = data[cols]
+    data.fillna(game_conf.time_limit)
     perf = []
     for i in range(1,game_conf.n_task+1):
-        perf.append([(200 + 200*i, x) for x in data[f"p{i}_time"]])
+        perf.append([(200 + 200*i, x) for x in data[f"p{i}_time"] if x < game_conf.time_limit])
     return perf
 
 class Player:

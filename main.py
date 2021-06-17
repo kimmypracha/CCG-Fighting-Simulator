@@ -4,11 +4,11 @@ from Game import CodeConquerorGame as ccg
 from config import game_conf
 userList = [Player(name = "A" + str(i), 
                    display_mode = game_conf.display_mode)
-                  for i in range(1000)]
+                  for i in range(100)]
 game = ccg(userList)
 silent_table = []
 # simulation 
-for i in range(1000000):
+for i in range(10000):
     game.play()
     silent_table += game.compute_silent()
 print("============================================")
