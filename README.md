@@ -9,10 +9,14 @@ python main.py
 ```
 
 ```summary.ipynb``` : The formal version of the simulator with the data visualization of the game factors such as the number of time-up match, etc. You can run the simulation by open this file on the Jupyter Notebook or run the following command.
+
 ```
 jupyter notebook
 ```
 And then open that file.
+
+
+**Note : You need to restart the jupyter notebook kernel everytime you change the configuration.**
 
 ## Configuration 
 
